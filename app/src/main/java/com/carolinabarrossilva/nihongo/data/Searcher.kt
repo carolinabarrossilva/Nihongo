@@ -1,6 +1,4 @@
-package com.carolinabarrossilva.nihongo.model
-
-import com.carolinabarrossilva.nihongo.data.Term
+package com.carolinabarrossilva.nihongo.data
 
 data class Searcher(val terms: List<Term>) {
     private infix fun Term.hasEnglishDefinitionsFor(search: String): Boolean {

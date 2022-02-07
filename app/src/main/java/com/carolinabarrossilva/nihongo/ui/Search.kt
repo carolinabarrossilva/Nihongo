@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.tooling.preview.Preview
 import com.carolinabarrossilva.nihongo.data.Term
-import com.carolinabarrossilva.nihongo.model.Searcher
+import com.carolinabarrossilva.nihongo.data.Searcher
 import com.carolinabarrossilva.nihongo.ui.component.TermCard
 import com.carolinabarrossilva.nihongo.ui.theme.NihongoTheme
 

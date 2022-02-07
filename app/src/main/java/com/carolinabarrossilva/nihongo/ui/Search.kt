@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.tooling.preview.Preview
 import com.carolinabarrossilva.nihongo.data.Term
+import com.carolinabarrossilva.nihongo.model.Searcher
 import com.carolinabarrossilva.nihongo.ui.component.TermCard
 import com.carolinabarrossilva.nihongo.ui.theme.NihongoTheme
 
@@ -28,8 +29,9 @@ private fun SearchPreview() {
 
 @Composable
 fun Search(modifier: Modifier = Modifier) {
+    val searcher = remember { Searcher(Term.samples) }
     var search by remember { mutableStateOf("") }
-    val terms = Term.samples
+    val terms by derivedStateOf { searcher searchFor search }
 
     Surface(
         Modifier.fillMaxSize(),
